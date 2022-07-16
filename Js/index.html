@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav-bar{
+            background-color: #2874f0;
+            color: azure;
+            font-size: larger;
+            padding: 10px;
+            font-family: 'Oswald', sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        li{
+            display: inline;
+        }
+        .nav-space{
+            margin-left: 30px;
+        }
+        li:hover{
+            background-color: black;
+            padding: 10px;
+        }
+        .brand-name{
+            background-color: black;
+            padding: 10px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .main-content{
+            font-family: 'Roboto';
+            padding: 40px;
+        }
+        .product-container{
+            background-color: #f4f7fa;
+            padding: 20px 20px 40px 20px;
+        }
+        .box{
+            height: 400px;
+            width: 300px;
+            text-align: center;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .products-container{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .btn-primary{
+            background-color: #2874f0;
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            /* to get curved edges */
+            border-radius: 9px;
+        }
+        .btn-primary:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+        .footer-contact{
+            text-align: center;
+            background-color: #2874f0;
+            padding: 20px;
+            font-family: 'Roboto';
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <!-- styles can be of 3 types inline internal external -->
+    
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <ul>
+            <li class="brand-name"> <a href="#">My Kirana <i class="fa fa-plane"></i> </a> </li>
+            <li class="nav-space"> <a href="#">Home</a>  </li>
+            <li class="nav-space"> <a href="#">About</a> </li>
+            <li class="nav-space"> <a href="#">Contact Us</a> </li>
+            <li class="nav-space"> <a href="#">Help</a> </li>
+        </ul>
+    </nav>
+    <!-- Navigation Ends -->
+    <!-- banner strats-->
+    <div class="banner-section">
+        <img src="./images/banner.jpg" alt="" height="100%" width="100%" srcset="">
+    </div>
+    <!-- banner ends  -->
+    <!-- main content , sans-serif; -->
+    <div class="main-content">
+        <div class="product-container">
+            <div class="text-center">
+                <h2 style="padding-top: 20px;"><u class="ul-style">OUR PRODUCTS</u> </h2>
+            </div>
+            <!--product boxes -->
+            <div class="products-container">
+                <div class="veggies box">
+                    <img src="./images/veggies.jpeg" alt="veggies" srcset="" height="300px" width="300px">
+                    <h3>veggies</h3>
+                    <button class="btn-primary">Buy Now</button>
+                </div>
+                <div class="friuts box">
+                    <img src="./images/friuts.jpg" alt="friuts" srcset="" height="300px" width="300px">
+                    <h3>Friuts</h3>
+                    <button class="btn-primary">Buy Now</button>
+                </div>
+                <div class="groceries box">
+                    <img src="./images/grocery.png" alt="grocery" srcset="" height="300px" width="300px">
+                    <h3>Groceries</h3>
+                    <button class="btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end main content -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-contact">
+            <h3>Our Branches</h3>
+            <a href="#">HYD |</a>
+            <a href="#">BGNLR |</a>
+            <a href="#">KBT |</a>
+            <a href="#">VZM</a>
+            <p style="background-color: black;color: #fff; padding: 5px; font-size: 20px;font-family: 'Oswald', sans-serif;"> all rigts reserved &copy; by VMK </p>
+        </div>
+    </div>
+    <!-- footer end -->
+</body>
+</html>
