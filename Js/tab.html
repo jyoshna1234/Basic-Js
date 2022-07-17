@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Tab logic
+    </title>
+    <style>
+        .tab-container {
+            background-color: black;
+        }
+
+        .btn {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab-container">
+        <div class="btn">
+            <button onclick="tabs('1')">Tab1</button>
+            <button onclick="tabs('2')">Tab2</button>
+            <button onclick="tabs('3')">Tab3</button>
+        </div>
+        <div style="color: beige;">
+            <p id="tab1-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, unde! Tenetur cum dolor
+                veniam neque!
+                Ad amet odio accusamus nisi corporis rem alias perspiciatis
+                numquam saepe dolore vel, libero voluptatum.</p>
+            <p id="tab2-content" style="display:none">tab-2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nisi, unde! Tenetur cum dolor veniam neque!
+                Ad amet odio accusamus nisi corporis rem alias perspiciatis
+                numquam saepe dolore vel, libero voluptatum.</p>
+            <p id="tab3-content" style="display:none">Tab-3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nisi, unde! Tenetur cum dolor veniam neque!
+                Ad amet odio accusamus nisi corporis rem alias perspiciatis
+                numquam saepe dolore vel, libero voluptatum.</p>
+        </div>
+    </div>
+    <script src="tab.js"></script>
+</body>
+
+</html>

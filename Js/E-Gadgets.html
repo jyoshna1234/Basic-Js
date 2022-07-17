@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>E-Gadgets</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lato:wght@300;700&display=swap" rel="stylesheet">
-        <style>
-            *{
-                padding: 0;
-                margin: 0;
-            }
-            .Welcome-note{
-                background-color:#6b5b95; 
-                font-family: 'Edu TAS Beginner', cursive;
-                color:white;
-                padding: 20px 20px;
-                text-align: center;
-                font-size: large;
-            }
-            .nav-bar{
-                background-color: #a2b9bc;
-                color: azure;
-                font-size: large;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                padding: 10px;
-                margin-top: 10px;
-            }
-            .list-animation{
-                display: inline;
-                padding:20px;
-            }
-            .list-animation:hover{
-                background-color: #6b5b95;
-                padding: 10px;
-            }
-            a{
-                text-decoration: none;
-                color: white;
-            }
-            .products-container{
-                background-color: white;
-                display: flex;
-                justify-content: space-around;
-                padding: 20px;
-                
-            }
-            .btn{
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Gadgets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lato:wght@300;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .Welcome-note {
+            background-color: #6b5b95;
+            font-family: 'Edu TAS Beginner', cursive;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            font-size: large;
+        }
+
+        .nav-bar {
+            background-color: #a2b9bc;
+            color: azure;
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .list-animation {
+            display: inline;
+            padding: 20px;
+        }
+
+        .list-animation:hover {
+            background-color: #6b5b95;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .products-container {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+
+        }
+
+        .btn {
             background-color: #2874f0;
             padding: 10px;
             font-size: 20px;
@@ -58,113 +67,124 @@
             border: none;
             margin-top: 20px;
             border-radius: 9px;
-            align:center;
-            }
-            .btn:hover{
-                background-color: #606670;
-                cursor: pointer;
-            }
-            .box{
+            align: center;
+        }
+
+        .btn:hover {
+            background-color: #606670;
+            cursor: pointer;
+        }
+
+        .box {
             height: 400px;
             width: 300px;
             text-align: center;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
-            h3{
-                align:center;
-                color: #6b5b95;
-            }
-            .banner{
-                margin-bottom: 10px;
-            }
-            .page-footer{
-                background-color: #6b5b95;
-                padding: 10px ;
-                display:flex;
-                justify-content: space-around;
-                
-            }
-            .branch{
-               font-family:'Edu TAS Beginner', cursive;
-               display:list-item;
-               color: black;
-               font-size: medium;
-            }
-            .heading{
-                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-                color: #2874f0;
-                padding=10px;
-                text-align:center;
-                font-size: large;
-            }
-            li{
-                list-style-type:none;
-            }
-            
-        </style>
-    </head>
-    <body>
-        <p class="Welcome-note">Welcome to E-Gadgets Store...Happy Shopping :) <i class="fa fa-pencil"></i> </p>
-        <!-- Navigation bar start-->
-       <nav class="nav-bar">
-            <ul>
-                <li style="background-color: #6b5b95; padding: 10px;" class="list-animation" > <a href ="#" ><b> Gadgets Store</b>  </a></li>
-                <li class="list-animation"> <a href ="#" > <b>Home </b> </a></li>
-                <li class="list-animation"> <a href ="#" > <b>Contact Us<b></b> </a></li>
-                <li class="list-animation"> <a href ="#" > <b>Help </b></a></li>
-                
-            </ul>
-        </nav>
-        <!--Navigation bar ends-->
-        <!--Banner starts-->
-        <div class="banner">
-            <img src="./images/gadgets.jpg" alt="" height="600px" width="100%" srcset="">
-        </div>
-        <!-- Banner Ends-->
-        <div class="main-content">
-            <!-- main content starts-->
-            <div class="heading">
-                <h4>Check out our Collection</h4>
-            </div>
-            <!--cards starts-->
-            <div class="products-container">
-                <div class="mobile box">
-                    <img src="./images/mobile.jpg" alt="phone" srcset="" height="300px" width="300px">
-                    <h3>Mobiles</h3>
-                    <button class="btn">Buy now</button>
-                </div>
-                <div class="laptop box">
-                    <img src="./images/laptop.jpg" alt="laptop" srcset="" height="300px" width="300px">
-                    <h3>Laptops</h3>
-                    <button class="btn">Buy now</button>
-                </div>
-                <div class="headset box">
-                    <img src="./images/headset.jpg" alt="phone" srcset="" height="300px" width="300px">
-                    <h3>Headset</h3>
-                    <button class="btn">Buy now</button>
-                </div>
 
+        h3 {
+            align: center;
+            color: #6b5b95;
+        }
+
+        .banner {
+            margin-bottom: 10px;
+        }
+
+        .page-footer {
+            background-color: #6b5b95;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .branch {
+            font-family: 'Edu TAS Beginner', cursive;
+            display: list-item;
+            color: black;
+            font-size: medium;
+        }
+
+        .heading {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2874f0;
+            padding=10px;
+            text-align: center;
+            font-size: large;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="Welcome-note">Welcome to E-Gadgets Store...Happy Shopping :) <i class="fa fa-pencil"></i> </p>
+    <!-- Navigation bar start-->
+    <nav class="nav-bar">
+        <ul>
+            <li style="background-color: #6b5b95; padding: 10px;" class="list-animation"> <a href="#"><b> Gadgets
+                        Store</b> </a></li>
+            <li class="list-animation"> <a href="#"> <b>Home </b> </a></li>
+            <li class="list-animation"> <a href="#"> <b>Contact Us<b></b> </a></li>
+            <li class="list-animation"> <a href="#"> <b>Help </b></a></li>
+
+        </ul>
+    </nav>
+    <!--Navigation bar ends-->
+    <!--Banner starts-->
+    <div class="banner">
+        <img src="./images/gadgets.jpg" alt="" height="600px" width="100%" srcset="">
+    </div>
+    <!-- Banner Ends-->
+    <div class="main-content">
+        <!-- main content starts-->
+        <div class="heading">
+            <h4>Check out our Collection</h4>
+        </div>
+        <!--cards starts-->
+        <div class="products-container">
+            <div class="mobile box">
+                <img src="./images/mobile.jpg" alt="phone" srcset="" height="300px" width="300px">
+                <h3>Mobiles</h3>
+                <button class="btn">Buy now</button>
             </div>
-        </div >
-        <!--main content ends-->
-        <div class="footer-container">
-            <footer class="page-footer" >
-                <div>
-                <ul style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" align="center">Our Branches
+            <div class="laptop box">
+                <img src="./images/laptop.jpg" alt="laptop" srcset="" height="300px" width="300px">
+                <h3>Laptops</h3>
+                <button class="btn">Buy now</button>
+            </div>
+            <div class="headset box">
+                <img src="./images/headset.jpg" alt="phone" srcset="" height="300px" width="300px">
+                <h3>Headset</h3>
+                <button class="btn">Buy now</button>
+            </div>
+
+        </div>
+    </div>
+    <!--main content ends-->
+    <div class="footer-container">
+        <footer class="page-footer">
+            <div>
+                <ul style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" align="center">
+                    Our Branches
                     <li class="branch">Hyderabad</li>
                     <li class="branch">Banglore</li>
                     <li class="branch">vijayawada</li>
                     <li class="branch">Kurnool</li>
                 </ul>
-                </div>
-                <div>
+            </div>
+            <div>
                 <ul style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Dial Us
                     <li class="branch">12345678910</li>
                     <li class="branch">45123968775</li>
 
                 </ul>
-                </div>
-            </footer>
-        </div>
-    </body>
+            </div>
+        </footer>
+    </div>
+</body>
+
 </html>

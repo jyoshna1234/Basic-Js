@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dynamic Forms</title>
+</head>
+
+<body>
+    <form class="sign-up" onsubmit="return fun(event)" method="post">
+        <label for="Username"> Username</label>
+        <input type="text" name="Username" id="Uname"><br>
+        <label for="mobile"> Phone Number</label>
+        <input type="number" name="mobile" id="phone"><br>
+        <label for="email"> Email-Id</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="password"> Password</label>
+        <input type="password" name="password" id="password"><br>
+        <label for="cnfrm-password"> Confirm Password</label>
+        <input type="password" name="cnfrm-password" id="cnfrm-password"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="status-message"></p>
+    <form class="sign-in" onsubmit="return login(event)" method="post">
+        <label for="sign-Un"> Username</label>
+        <input type="text" name="sign-Un" id="sign-Un"><br>
+        <label for="sign-pass"> Password</label>
+        <input type="number" name="sign-pass" id="sign-pass"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+         let userData=[];
+        function fun(event_name){
+            event_name.preventDefault();
+           
+            let UN=document.getElementById("Uname").value;
+            let mob=document.getElementById("phone").value;
+            let mail=document.getElementById("email").value;
+            let pass=document.getElementById("password").value;
+            let cPass=document.getElementById("cnfrm-password").value;
+            console.log(UN,mob,mail,pass,cPass);
+            if(cPass!=pass){
+                document.getElementById("status-message").innerText="invalid Input";
+                return;
+            }
+            else{
+                userData.push(UN);
+                userData.push(mob);
+                userData.push(mail);
+                userData.push(pass);
+                userData.push(cPass);
+               /*Emptying form data after storing form-data in array*/
+               document.getElementById("Uname").value='';
+               document.getElementById("phone").value='';
+               document.getElementById("email").value='';
+               document.getElementById("password").value='';
+               document.getElementById("cnfrm-password").value='';
+               document.getElementById("status-message").innerText="Successs!!!!";
+            }
+            console.log(userData);
+            
+        }
+        function login(e){
+            e.preventDefault();
+            let count=0;
+            let UN = document.getElementById("sign-Un").value;
+            let pass = document.getElementById("sign-pass").value;
+            console.log(UN,pass,"From login");
+            for(var i=0; i<=userData.length;i++){
+                if(userData[i]==UN || userData[i]==pass){
+                    count+=1;
+                }
+            }
+            console.log(count);
+            if(count==3){
+                alert("Success!!!");
+            }
+            else{
+                    alert("password tappu ra poola chokka")
+                }
+            document.getElementById("sign-Un").value='';
+            document.getElementById("sign-pass").value='';
+            count=0;
+        }
+    </script>
+</body>
+
+</html>
