@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student login Form</title>
+</head>
+
+<body>
+    <form class="sign-up" onsubmit="return login(event)" method="post">
+        <label for="name">StudentName</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="mobile">MobileNumber</label>
+        <input type="number" name="mobile" id="mobile"><br>
+        <label for="password"> Password</label>
+        <input type="password" name="password" id="password"><br>
+        <label for="cnfrm-password"> Confirm Password</label>
+        <input type="password" name="cnfrm-password" id="cnfrm-password"><br>
+        <label for=" collegeName">Choose college name: </label>
+        <select name="collegeName" id="collegeName">
+            <option value="lendi">Lendi</option>
+            <option value="mvgr">MVGR</option>
+            <option value="anits">Anits</option>
+            <option value="gvp">GVP</option> 
+            <option value="others">others</option>
+        </select><br>
+        <div style="display: none" id="other-clgs">
+            <label for="other-clg">Enter collegeName</label>
+            <input type="text" name="other-clg" id="other-clg"><br>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+    <p id="status-message"></p>
+    <script>
+        
+        let studentArray = [];
+        function login(event) {
+            event.preventDefault();
+            let SN = document.getElementById("name").value;
+            let mail = document.getElementById("email").value;
+            let Smobile = document.getElementById("mobile").value;
+            let pass = document.getElementById("password").value;
+            let cPass = document.getElementById("cnfrm-password").value;
+            let otherClgName;
+            let getSelectedText = (el) => {
+                    if (el.selectedIndex === -1) {
+                        return null;
+                    }
+                    return el.options[el.selectedIndex].text;
+                }
+                let select = document.querySelector('select')
+                let text = getSelectedText(select);
+                if (text == "others") {
+                    document.getElementById("other-clgs").style.display = "block";
+                    
+                }
+            if (cPass != pass) {
+                document.getElementById("status-message").innerText = "invalid Input";
+                return;
+            }
+            else {
+                studentArray.push(SN);
+                studentArray.push(mail);
+                studentArray.push(Smobile);
+                studentArray.push(pass);
+                studentArray.push(cPass);
+                studentArray.push(otherClgName);
+                document.getElementById("status-message").innerText = "Successs!!!!";
+
+            }
+            console.log(studentArray);
+            document.getElementById("name").value = '';
+            document.getElementById("email").value = '';
+            document.getElementById("mobile").value = '';
+            document.getElementById("password").value = '';
+            document.getElementById("cnfrm-password").value = '';
+            document.getElementById("collegeName").value = 'default';
+        }
+    </script>
+</body>
+
+</html>
